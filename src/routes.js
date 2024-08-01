@@ -1,21 +1,14 @@
 // const {Router} = require("express")
 import { Router } from "express"
+// import { v4 } from "uuid"
 
-
+// import User from "./app/models/User"
 
 const routes = new Router()
 
 
-
-routes.get('/', (request, response) => {
-
-
-
-
-
-    return response.json({ menssage: 'Hello world' })
-
-})
+import UserController from "./app/controllers/UserController"
+routes.post('/users', UserController.store)
 
 export default routes
 
